@@ -1,0 +1,477 @@
+﻿<Page x:Class="disight.FPages.ContactsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:disight.FPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="ContactsPage">
+
+    <Grid Name="RootGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="355*"
+                              MinWidth="300"/>
+            <ColumnDefinition Width="888*"
+                              MinWidth="350"/>
+            <ColumnDefinition Width="677*"
+                              MinWidth="600"/>
+        </Grid.ColumnDefinitions>
+        <!-- Левая панель -->
+        <Grid Background="#07CC85">
+            <Border Grid.Row="1"
+                    Height="50"
+                    Width="150"
+                    Background="AliceBlue"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Margin="50 50 0 0"
+                    CornerRadius="20"
+                    Name="btnBack"
+                    MouseDown="btnBack_MouseDown">
+                <TextBlock Text="Назад"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontSize="30"
+                           FontFamily="Roboto"/>
+            </Border>
+            <TextBlock Text="Главная"
+                       FontSize="25"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       Margin="88 154 0 0"/>
+            <Image Height="39"
+                   Width="39"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Source="/FImages/home 3.png"
+                   Margin="32 154 0 0"/>
+            <TextBlock Text="Контакты"
+                       FontSize="25"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       Margin="88 223 0 0"/>
+            <Image Height="39"
+                   Width="39"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Source="/FImages/friends 3.png"
+                   Margin="32 223 0 0"/>
+            <TextBlock Text="Личный кабинет"
+                       FontSize="25"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       Margin="88 295 0 0"/>
+            <Image Height="39"
+                   Width="39"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Source="/FImages/contacts 3.png"
+                   Margin="32 295 0 0"/>
+            <TextBlock Text="Выйти"
+                       FontSize="25"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       Margin="88 379 0 0"/>
+            <Image Height="39"
+                   Width="39"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Source="/FImages/exit 3.png"
+                   Margin="32 379 0 0"/>
+        </Grid>
+        <!-- Контакты -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="230"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <!-- Блок текст бокса поиска контактов -->
+            <TextBlock Text="Контакты"
+                       FontSize="60"
+                       FontWeight="DemiBold"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       Margin="22 37 0 0"/>
+            <TextBox
+                Height="60"
+                Margin="15 147 15 0"
+                Background="#07CC85"
+                VerticalAlignment="Top">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <!-- Блок контактов -->
+            <ScrollViewer VerticalScrollBarVisibility="Hidden"
+                          Grid.Row="1">
+                <StackPanel>
+                    <!-- Буквы первой буквы контакта -->
+                    <TextBlock Text="A"
+                           FontSize="40"
+                           FontWeight="DemiBold"
+                           Margin="36 0 0 0"/>
+                    <!-- Кнопка контакта -->
+                    <Grid Margin="15 20 15 0"
+                          Height="90">
+                        <Button Background="#07CC85"
+                            Style="{StaticResource BtnWithCornerRadius}"/>
+                        <Image Height="65"
+                           Width="65"
+                           Source="/FImages/mask.png"
+                           HorizontalAlignment="Left"
+                           Margin="15"/>
+                        <TextBlock Text="Vlad Shipilov"
+                               FontSize="15"
+                               FontWeight="DemiBold"
+                               Margin="109 12 0 0"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"/>
+                        <TextBlock Text="Online"
+                               FontSize="15"
+                               Margin="109 44 0 0"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"/>
+                        <Image Height="36"
+                           Width="36"
+                           Source="/FImages/ellipsis.png"
+                           HorizontalAlignment="Right"
+                           Margin="15"/>
+                    </Grid>
+                    <Grid Margin="15 20 15 0"
+                      Height="90">
+                        <Button Background="#07CC85"
+                            Style="{StaticResource BtnWithCornerRadius}"/>
+                        <Image Height="65"
+                           Width="65"
+                           Source="/FImages/mask.png"
+                           HorizontalAlignment="Left"
+                           Margin="15"/>
+                        <TextBlock Text="Vlad Shipilov"
+                               FontSize="15"
+                               FontWeight="DemiBold"
+                               Margin="109 12 0 0"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"/>
+                        <TextBlock Text="Online"
+                               FontSize="15"
+                               Margin="109 44 0 0"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"/>
+                        <Image Height="36"
+                           Width="36"
+                           Source="/FImages/ellipsis.png"
+                           HorizontalAlignment="Right"
+                           Margin="15"/>
+                    </Grid>
+                    <TextBlock Text="Б"
+                           FontSize="40"
+                           FontWeight="DemiBold"
+                           Margin="36 0 0 0"/>
+                    <Grid Margin="15 20 15 0"
+                      Height="90">
+                        <Button Background="#07CC85"
+                            Style="{StaticResource BtnWithCornerRadius}"/>
+                        <Image Height="65"
+                           Width="65"
+                           Source="/FImages/mask.png"
+                           HorizontalAlignment="Left"
+                           Margin="15"/>
+                        <TextBlock Text="Vlad Shipilov"
+                               FontSize="15"
+                               FontWeight="DemiBold"
+                               Margin="109 12 0 0"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"/>
+                        <TextBlock Text="Online"
+                               FontSize="15"
+                               Margin="109 44 0 0"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"/>
+                        <Image Height="36"
+                           Width="36"
+                           Source="/FImages/ellipsis.png"
+                           HorizontalAlignment="Right"
+                           Margin="15"/>
+                    </Grid>
+                    <TextBlock Text="Д"
+                           FontSize="40"
+                           FontWeight="DemiBold"
+                           Margin="36 0 0 0"/>
+                    <Grid Margin="15 20 15 0"
+                      Height="90">
+                        <Button Background="#07CC85"
+                            Style="{StaticResource BtnWithCornerRadius}"/>
+                        <Image Height="65"
+                           Width="65"
+                           Source="/FImages/mask.png"
+                           HorizontalAlignment="Left"
+                           Margin="15"/>
+                        <TextBlock Text="Vlad Shipilov"
+                               FontSize="15"
+                               FontWeight="DemiBold"
+                               Margin="109 12 0 0"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"/>
+                        <TextBlock Text="Online"
+                               FontSize="15"
+                               Margin="109 44 0 0"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"/>
+                        <Image Height="36"
+                           Width="36"
+                           Source="/FImages/ellipsis.png"
+                           HorizontalAlignment="Right"
+                           Margin="15"/>
+                    </Grid>
+                    <TextBlock Text="Л"
+                           FontSize="40"
+                           FontWeight="DemiBold"
+                           Margin="36 0 0 0"/>
+                    <Grid Margin="15 20 15 0"
+                      Height="90">
+                        <Button Background="#07CC85"
+                            Style="{StaticResource BtnWithCornerRadius}"/>
+                        <Image Height="65"
+                           Width="65"
+                           Source="/FImages/mask.png"
+                           HorizontalAlignment="Left"
+                           Margin="15"/>
+                        <TextBlock Text="Vlad Shipilov"
+                               FontSize="15"
+                               FontWeight="DemiBold"
+                               Margin="109 12 0 0"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"/>
+                        <TextBlock Text="Online"
+                               FontSize="15"
+                               Margin="109 44 0 0"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"/>
+                        <Image Height="36"
+                           Width="36"
+                           Source="/FImages/ellipsis.png"
+                           HorizontalAlignment="Right"
+                           Margin="15"/>
+                    </Grid>
+                    <Grid Margin="15 20 15 0"
+                      Height="90">
+                        <Button Background="#07CC85"
+                            Style="{StaticResource BtnWithCornerRadius}"/>
+                        <Image Height="65"
+                           Width="65"
+                           Source="/FImages/mask.png"
+                           HorizontalAlignment="Left"
+                           Margin="15"/>
+                        <TextBlock Text="Vlad Shipilov"
+                               FontSize="15"
+                               FontWeight="DemiBold"
+                               Margin="109 12 0 0"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"/>
+                        <TextBlock Text="Online"
+                               FontSize="15"
+                               Margin="109 44 0 0"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"/>
+                        <Image Height="36"
+                           Width="36"
+                           Source="/FImages/ellipsis.png"
+                           HorizontalAlignment="Right"
+                           Margin="15"/>
+                    </Grid>
+                    <Grid Margin="15 20 15 0"
+                      Height="90">
+                        <Button Background="#07CC85"
+                            Style="{StaticResource BtnWithCornerRadius}"/>
+                        <Image Height="65"
+                           Width="65"
+                           Source="/FImages/mask.png"
+                           HorizontalAlignment="Left"
+                           Margin="15"/>
+                        <TextBlock Text="Vlad Shipilov"
+                               FontSize="15"
+                               FontWeight="DemiBold"
+                               Margin="109 12 0 0"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"/>
+                        <TextBlock Text="Online"
+                               FontSize="15"
+                               Margin="109 44 0 0"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"/>
+                        <Image Height="36"
+                           Width="36"
+                           Source="/FImages/ellipsis.png"
+                           HorizontalAlignment="Right"
+                           Margin="15"/>
+                    </Grid>
+                    <Grid Margin="15 20 15 0"
+                      Height="90">
+                        <Button Background="#07CC85"
+                            Style="{StaticResource BtnWithCornerRadius}"/>
+                        <Image Height="65"
+                           Width="65"
+                           Source="/FImages/mask.png"
+                           HorizontalAlignment="Left"
+                           Margin="15"/>
+                        <TextBlock Text="Vlad Shipilov"
+                               FontSize="15"
+                               FontWeight="DemiBold"
+                               Margin="109 12 0 0"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"/>
+                        <TextBlock Text="Online"
+                               FontSize="15"
+                               Margin="109 44 0 0"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"/>
+                        <Image Height="36"
+                           Width="36"
+                           Source="/FImages/ellipsis.png"
+                           HorizontalAlignment="Right"
+                           Margin="15"/>
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+        <!-- Блок профиля -->
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="230"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <!-- Градиент -->
+            <Grid>
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0.5, 0" EndPoint="0.5 1">
+                        <GradientStop Color="#07CC85" Offset="0"/>
+                        <GradientStop Color="#12BBA6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+            </Grid>
+            <Image Height="270"
+                   Width="270"
+                   Grid.RowSpan="2"
+                   Source="/FImages/mask.png"
+                   Margin="0 66 0 0"
+                   VerticalAlignment="Top"/>
+            <!-- Информация профиля -->
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="160"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <!-- Кнопка звонка -->
+                <Button
+                    Height="50"
+                    Width="50"
+                    Background="Transparent"
+                    Margin="0 21 104 0"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Right"
+                    BorderThickness="0">
+                    <Button.Content>
+                        <Image Source="/FImages/trubka.png"/>
+                    </Button.Content>
+                </Button>
+                <!-- Кнопка сообщения -->
+                <Button
+                    Height="50"
+                    Width="50"
+                    Background="Transparent"
+                    Margin="0 21 43 0"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Right"
+                    BorderThickness="0">
+                    <Button.Content>
+                        <Image Source="/FImages/message.png"/>
+                    </Button.Content>
+                </Button>
+                <!-- Имя пользователя-->
+                <TextBlock Text="Влад Шипилов"
+                           FontSize="30"
+                           FontWeight="DemiBold"
+                           VerticalAlignment="Top"
+                           HorizontalAlignment="Center"
+                           Margin="0 120 0 0"/>
+                <StackPanel Grid.Row="1">
+                    <Grid Margin="0 0 0 0">
+                        <TextBlock Text="Имя"
+                               FontSize="30"
+                               FontWeight="DemiBold"
+                               Margin="70 0 0 0"
+                               HorizontalAlignment="Left"/>
+                        <Border Height="90"
+                                Margin="50 50 50 0"
+                                Background="#EDEDED"
+                                CornerRadius="10">
+                            <TextBlock Text="Влад"
+                                   FontSize="30"
+                                   FontWeight="DemiBold"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"/>
+                        </Border>
+                    </Grid>
+                    <Grid Margin="0 20 0 0">
+                        <TextBlock Text="Фамилия"
+                               FontSize="30"
+                               FontWeight="DemiBold"
+                               Margin="70 0 0 0"
+                               HorizontalAlignment="Left"/>
+                        <Border Height="90"
+                                Margin="50 50 50 0"
+                                Background="#EDEDED"
+                                CornerRadius="10">
+                            <TextBlock Text="Шипилов"
+                                   FontSize="30"
+                                   FontWeight="DemiBold"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"/>
+                        </Border>
+                    </Grid>
+                    <Grid Margin="0 20 0 0">
+                        <TextBlock Text="Почта"
+                               FontSize="30"
+                               FontWeight="DemiBold"
+                               Margin="70 0 0 0"
+                               HorizontalAlignment="Left"/>
+                        <Border Height="90"
+                                Margin="50 50 50 0"
+                                Background="#EDEDED"
+                                CornerRadius="10">
+                            <TextBlock Text="vlad.shipilov.felocs@gmail.com"
+                                   FontSize="30"
+                                   FontWeight="DemiBold"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"/>
+                        </Border>
+                    </Grid>
+                    <Grid Margin="0 20 0 0">
+                        <TextBlock Text="Телефон"
+                               FontSize="30"
+                               FontWeight="DemiBold"
+                               Margin="70 0 0 0"
+                               HorizontalAlignment="Left"/>
+                        <Border Height="90"
+                                Margin="50 50 50 0"
+                                Background="#EDEDED"
+                                CornerRadius="10">
+                            <TextBlock Text="+7 (800)-555-35-35"
+                                   FontSize="30"
+                                   FontWeight="DemiBold"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"/>
+                        </Border>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

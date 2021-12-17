@@ -1,0 +1,245 @@
+﻿<Page x:Class="disight.FPages.PersonalAccount"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:disight.FPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="PersonalAccount">
+
+    <Grid Name="RootGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="355*"
+                              MinWidth="300"/>
+            <ColumnDefinition Width="1565*"
+                              MinWidth="800"/>
+        </Grid.ColumnDefinitions>
+        <!-- Левая панель -->
+        <Grid Background="#07CC85"
+              Grid.RowSpan="2">
+            <Border Grid.Row="1"
+                    Height="50"
+                    Width="150"
+                    Background="AliceBlue"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Margin="50 50 0 0"
+                    CornerRadius="20"
+                    Name="btnBack"
+                    MouseDown="btnBack_MouseDown">
+                <TextBlock Text="Назад"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontSize="30"
+                           FontFamily="Roboto"/>
+            </Border>
+            <TextBlock Text="Главная"
+                       FontSize="25"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       Margin="88 154 0 0"/>
+            <Image Height="39"
+                   Width="39"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Source="/FImages/home 3.png"
+                   Margin="32 154 0 0"/>
+            <TextBlock Text="Контакты"
+                       FontSize="25"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       Margin="88 223 0 0"/>
+            <Image Height="39"
+                   Width="39"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Source="/FImages/friends 3.png"
+                   Margin="32 223 0 0"/>
+            <TextBlock Text="Личный кабинет"
+                       FontSize="25"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       Margin="88 295 0 0"/>
+            <Image Height="39"
+                   Width="39"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Source="/FImages/contacts 3.png"
+                   Margin="32 295 0 0"/>
+            <TextBlock Text="Выйти"
+                       FontSize="25"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       Margin="88 379 0 0"/>
+            <Image Height="39"
+                   Width="39"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Source="/FImages/exit 3.png"
+                   Margin="32 379 0 0"/>
+        </Grid>
+        <!-- Правая панель -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="310"/>
+                <RowDefinition Height="770*"/>
+            </Grid.RowDefinitions>
+            <!-- Градиент -->
+            <Grid>
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0.5, 0" EndPoint="0.5 1">
+                        <GradientStop Color="#07CC85" Offset="0"/>
+                        <GradientStop Color="#12BBA6" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+            </Grid>
+            <TextBlock Text="Личный кабинет"
+                       FontSize="60"
+                       FontWeight="DemiBold"
+                       Margin="22 37 0 0"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"/>
+            <Image Height="270"
+                   Width="270"
+                   Grid.RowSpan="2"
+                   Source="/FImages/mask.png"
+                   Margin="0 110 0 0"
+                   VerticalAlignment="Top"/>
+            <TextBlock Text="Илон Маск"
+                       Grid.Row="1"
+                       FontSize="30"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       FontWeight="DemiBold"
+                       Margin="0 68 0 0"/>
+            <ScrollViewer VerticalScrollBarVisibility="Hidden"
+                          Grid.Row="1"
+                          Margin="0 130 0 0">
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel >
+                        <Grid VerticalAlignment="Top">
+                            <TextBlock Text="Имя"
+                           FontSize="30"
+                           FontWeight="DemiBold"
+                           Margin="70 0 0 0"
+                           HorizontalAlignment="Left" Height="140" VerticalAlignment="Bottom"/>
+                            <Border Height="90"
+                        Margin="50 50 50 0"
+                        Background="#EDEDED"
+                        CornerRadius="10">
+                                <TextBlock Text="Илон"
+                               FontSize="30"
+                               FontWeight="DemiBold"
+                               Margin="20 0 0 0"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"/>
+                            </Border>
+                        </Grid>
+                        <Grid VerticalAlignment="Top"
+                          Margin="0 50 0 0">
+                            <TextBlock Text="Фамилия"
+                           FontSize="30"
+                           FontWeight="DemiBold"
+                           Margin="70 0 0 0"
+                           HorizontalAlignment="Left"/>
+                            <Border Height="90"
+                        Margin="50 50 50 0"
+                        Background="#EDEDED"
+                        CornerRadius="10">
+                                <TextBlock Text="Маск"
+                               FontSize="30"
+                               FontWeight="DemiBold"
+                               Margin="20 0 0 0"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"/>
+                            </Border>
+                        </Grid>
+                        <Grid VerticalAlignment="Top"
+                          Margin="0 50 0 0">
+                            <TextBlock Text="Страна"
+                           FontSize="30"
+                           FontWeight="DemiBold"
+                           Margin="70 0 0 0"
+                           HorizontalAlignment="Left"/>
+                            <Border Height="90"
+                        Margin="50 50 50 0"
+                        Background="#EDEDED"
+                        CornerRadius="10">
+                                <TextBlock Text="USA"
+                               FontSize="30"
+                               FontWeight="DemiBold"
+                               Margin="20 0 0 0"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"/>
+                            </Border>
+                        </Grid>
+                    </StackPanel>
+                    <StackPanel
+                            Grid.Column="1">
+                        <Grid VerticalAlignment="Top">
+                            <TextBlock Text="Логин"
+                           FontSize="30"
+                           FontWeight="DemiBold"
+                           Margin="70 0 0 0"
+                           HorizontalAlignment="Left"/>
+                            <Border Height="90"
+                        Margin="50 50 50 0"
+                        Background="#EDEDED"
+                        CornerRadius="10">
+                                <TextBlock Text="ElonMask"
+                               FontSize="30"
+                               FontWeight="DemiBold"
+                               Margin="20 0 0 0"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"/>
+                            </Border>
+                        </Grid>
+                        <Grid VerticalAlignment="Top"
+                          Margin="0 50 0 0">
+                            <TextBlock Text="Почта"
+                           FontSize="30"
+                           FontWeight="DemiBold"
+                           Margin="70 0 0 0"
+                           HorizontalAlignment="Left"/>
+                            <Border Height="90"
+                        Margin="50 50 50 0"
+                        Background="#EDEDED"
+                        CornerRadius="10">
+                                <TextBlock Text="ElonMask@tesla.com"
+                               FontSize="30"
+                               FontWeight="DemiBold"
+                               Margin="20 0 0 0"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"/>
+                            </Border>
+                        </Grid>
+                        <Grid VerticalAlignment="Top"
+                          Margin="0 50 0 0">
+                            <TextBlock Text="Телефон"
+                           FontSize="30"
+                           FontWeight="DemiBold"
+                           Margin="70 0 0 0"
+                           HorizontalAlignment="Left"/>
+                            <Border Height="90"
+                        Margin="50 50 50 0"
+                        Background="#EDEDED"
+                        CornerRadius="10">
+                                <TextBlock Text="+7 (999)-873-33-11"
+                               FontSize="30"
+                               FontWeight="DemiBold"
+                               Margin="20 0 0 0"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Left"/>
+                            </Border>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer> 
+        </Grid>
+    </Grid>
+</Page>
